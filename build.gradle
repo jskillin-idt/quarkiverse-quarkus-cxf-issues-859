@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'io.quarkus'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    implementation 'io.quarkiverse.cxf:quarkus-cxf:2.0.2'
+}
+
+group 'org.acme'
+version '1.0.0-SNAPSHOT'
+
+java {
+    withSourcesJar()
+}
